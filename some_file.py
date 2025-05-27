@@ -14,4 +14,5 @@ while counter < MAX_COUNTER:
     
     print(f'attempt = {counter}')
 
-    updates = requests.get(f'{API_URL}{BOT_TOKEN}')
+    updates = requests.get(f'{API_URL}{BOT_TOKEN}/getUpdates?offset={offset + 1}').json()
+    
