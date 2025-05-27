@@ -1,10 +1,17 @@
 import requests
+import time
 
-api_url = 'http://api.open-notify.org/iss-now.json'
+API_URL = 'https://api.telegram.org/bot'
+BOT_TOKEN = '7509133933:AAF0qn3sYQ2K5MSdQ7d4H_MW0PCme-AVDhY'
+TEXT = 'Ура, классный апдейт!'
+MAX_COUNTER = 100
 
-response = requests.get(api_url)
+offset = -2
+counter = 0
+chat_id : int
 
-if response.status_code == 200:
-    print(response.text)
-else:
-    print(response.status_code)
+while counter < MAX_COUNTER:
+    
+    print(f'attempt = {counter}')
+
+    updates = requests.get(f'{API_URL}{BOT_TOKEN}')
