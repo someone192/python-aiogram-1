@@ -2,7 +2,7 @@ import requests
 import time
 
 API_URL = 'https://api.telegram.org/bot'
-BOT_TOKEN = '7509133933:AAF0qn3sYQ2K5MSdQ7d4H_MW0PCme-AVDhY'
+BOT_TOKEN = 'token'
 TEXT = 'Ура, классный апдейт!'
 MAX_COUNTER = 100
 
